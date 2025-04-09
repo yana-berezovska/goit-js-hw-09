@@ -30,11 +30,11 @@ form.addEventListener('submit', evnt => {
 
   if (elements.email.value === '' || elements.message.value === '') {
     alert('Fill please all fields');
-  } else {
-    console.log(formData);
-    localStorage.removeItem(localStorageKey);
-    form.reset();
-    formData.email = '';
-    formData.message = '';
+    return;
   }
+  console.log(formData);
+  localStorage.removeItem(localStorageKey);
+  form.reset();
+  formData.email = '';
+  formData.message = '';
 });
